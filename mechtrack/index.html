@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MechTrack — Degree Apprenticeship Radar</title>
+  <meta name="description" content="Personal UK degree apprenticeship radar for Mechanical Engineering, energy and oil & gas-adjacent routes." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">◎</div><div><b>MechTrack</b><small>Apprenticeship radar</small></div></div>
+      <nav>
+        <button class="nav active" data-tab="discover">⌕ <span>Discover</span></button>
+        <button class="nav" data-tab="tracker">✓ <span>My tracker</span></button>
+        <button class="nav" data-tab="watchlist">◉ <span>Opening soon</span></button>
+      </nav>
+      <div class="profile-card"><div class="eyebrow">TARGET PROFILE</div><b>Mechanical Engineering</b><p>Level 6 • 2027 entry</p><div class="chips"><span>T Level</span><span>Energy</span><span>UK</span></div></div>
+      <div class="feed-meta"><span><i></i> Research feed</span><small>Verified 22 Sep 2026</small></div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div><div class="eyebrow">2027 ENTRY</div><h1 id="page-title">Degree apprenticeship radar</h1><p id="page-sub">Mechanical, electromechanical and energy routes — employer vacancies first.</p></div>
+        <div class="curated">✦ <div><b>Curated research</b><small>Sources checked manually</small></div></div>
+      </header>
+
+      <section class="stats" id="stats"></section>
+
+      <section class="toolbar">
+        <label class="search"><span>⌕</span><input id="search" placeholder="Search employer, role, location…" /></label>
+        <div class="filters">
+          <select id="status-filter">
+            <option value="all">All statuses</option>
+            <option value="open">Open now</option>
+            <option value="soon">Opening soon</option>
+            <option value="watch">Watch</option>
+            <option value="route">University route</option>
+            <option value="special">Special route</option>
+          </select>
+          <button id="energy-filter" class="energy-toggle">⚡ Energy fit</button>
+        </div>
+      </section>
+
+      <section class="section-head"><div><b id="count">0 opportunities</b><span>Sorted by relevance to your target</span></div><small>↻ Last research pass: today</small></section>
+      <section class="cards" id="cards"></section>
+    </main>
+  </div>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden>
+    <aside class="drawer" id="drawer"></aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
